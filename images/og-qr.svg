@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Free QR Code Creator">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0052cc" />
+      <stop offset="100%" stop-color="#003d99" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ff7e5f" />
+      <stop offset="100%" stop-color="#f107a3" />
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Soft white diagonal overlay -->
+  <rect x="0" y="0" width="1200" height="630" fill="rgba(255,255,255,0.03)"/>
+
+  <!-- Left visual: stylized QR grid -->
+  <g transform="translate(80,75)" filter="url(#soft)">
+    <rect x="0" y="0" width="360" height="360" rx="20" fill="#fff" opacity="0.06" />
+    <!-- QR-like blocks -->
+    <g transform="translate(28,28)">
+      <!-- big corner squares -->
+      <rect x="0" y="0" width="64" height="64" fill="#ffffff"/>
+      <rect x="252" y="0" width="64" height="64" fill="#ffffff"/>
+      <rect x="0" y="252" width="64" height="64" fill="#ffffff"/>
+
+      <!-- small modules pattern -->
+      <g fill="#ffffff">
+        <!-- some random blocks to suggest a QR pattern -->
+        <rect x="80" y="48" width="16" height="16" />
+        <rect x="112" y="48" width="24" height="24" />
+        <rect x="160" y="48" width="16" height="16" />
+        <rect x="48" y="112" width="24" height="24" />
+        <rect x="96" y="112" width="16" height="16" />
+        <rect x="144" y="112" width="16" height="16" />
+        <rect x="200" y="112" width="24" height="24" />
+        <rect x="64" y="160" width="16" height="16" />
+        <rect x="120" y="160" width="24" height="24" />
+        <rect x="196" y="196" width="16" height="16" />
+      </g>
+
+      <!-- logo mark inside QR box -->
+      <circle cx="180" cy="180" r="34" fill="url(#accent)" stroke="#fff" stroke-width="3"/>
+      <text x="180" y="188" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">QR</text>
+    </g>
+  </g>
+
+  <!-- Right side text -->
+  <g transform="translate(480,140)">
+    <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff">Free QR Code Creator</text>
+
+    <text x="0" y="70" font-family="Inter, Arial, sans-serif" font-size="24" fill="#e6eefc">Create, customize and download high-quality QR codes with logo and design options.</text>
+
+    <!-- Call to action button -->
+    <g transform="translate(0,120)">
+      <rect x="0" y="-18" width="260" height="52" rx="8" fill="#ffffff"/>
+      <rect x="4" y="-14" width="252" height="44" rx="6" fill="url(#accent)" />
+      <text x="130" y="18" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">Create your QR — it's free</text>
+    </g>
+
+    <!-- Domain / branding -->
+    <text x="0" y="220" font-family="Inter, Arial, sans-serif" font-size="16" fill="#cfe2ff">digitalqrcard.com/tools/qr-generator</text>
+  </g>
+
+  <!-- subtle bottom-right accent -->
+  <g transform="translate(980,480)">
+    <circle cx="0" cy="0" r="40" fill="rgba(255,255,255,0.06)" />
+    <rect x="-18" y="-18" width="36" height="36" rx="6" fill="url(#accent)" />
+  </g>
+
+</svg>

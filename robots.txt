@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# User-generated card and customer-page paths. AdSense reviewers judge these
+# as low-quality regardless of how good the customer's card is, and we don't
+# want them in the index. Owner-facing dashboards stay reachable via auth.
+Disallow: /c/
+Disallow: /p/
+
+Sitemap: https://www.digitalqrcard.com/sitemap.xml
