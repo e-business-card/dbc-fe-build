@@ -1,0 +1,24 @@
+# Tracked short links for channel attribution in GA4
+# Pattern: /<channel-slug> → /?utm_source=<channel>&utm_medium=<medium>&utm_campaign=<placement>
+# Use these in bios, signatures, end-cards. Order matters: must come before SPA catchall.
+/tt   /?utm_source=tiktok&utm_medium=social&utm_campaign=bio_text     301!
+/li   /?utm_source=linkedin&utm_medium=social&utm_campaign=bio        301!
+/fb   /?utm_source=facebook&utm_medium=social&utm_campaign=bio        301!
+/yt   /?utm_source=youtube&utm_medium=social&utm_campaign=bio         301!
+/ig   /?utm_source=instagram&utm_medium=social&utm_campaign=bio       301!
+/em   /?utm_source=email&utm_medium=email&utm_campaign=signature      301!
+# Reddit posts under u/Calmfornia. Separate slugs so a comment link and a post
+# link can be told apart — on Reddit those behave very differently.
+/rd   /?utm_source=reddit&utm_medium=social&utm_campaign=post          301!
+/rdc  /?utm_source=reddit&utm_medium=social&utm_campaign=comment       301!
+
+# PWA "Add to Home Screen" assets for a public card, proxied from the API.
+# These must be served from this origin, not api.digitalqrcard.com: Chrome
+# rejects a manifest whose start_url sits on a different origin than the
+# manifest file. Backend routes live in dbc-be/routes/cards.js.
+/c/:id/manifest.webmanifest  https://api.digitalqrcard.com/cards/:id/manifest.webmanifest  200
+/c/:id/icon-192.png          https://api.digitalqrcard.com/cards/:id/icon/192              200
+/c/:id/icon-512.png          https://api.digitalqrcard.com/cards/:id/icon/512              200
+
+# SPA fallback — must stay last
+/*    /index.html   200

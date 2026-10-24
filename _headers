@@ -1,0 +1,27 @@
+# Netlify custom response headers. Rules match the REQUEST path, so they apply
+# to SPA routes even though every path rewrites to /index.html via _redirects.
+#
+# Why noindex on the card and live-page routes: those pages publish a
+# customer's phone number and email address. Keeping them out of the search
+# index is a privacy decision, not an SEO one, and it holds regardless of what
+# AdSense decides about this domain.
+#
+# Why a header and not just robots.txt: robots.txt blocks the CRAWL, which
+# means Google never fetches the page and therefore never reads a noindex.
+# A blocked URL can still be listed as a bare link with no snippet if Google
+# finds it referenced somewhere. X-Robots-Tag is the directive that actually
+# removes a page from the index, and it only works if crawling is ALLOWED.
+#
+# Sequencing, do not skip: the Disallow lines in robots.txt must stay until
+# this header is confirmed live (see the verify command in robots.txt).
+# Dropping the Disallow first would open these pages to indexing with nothing
+# in place to stop it.
+
+/c/*
+  X-Robots-Tag: noindex
+
+/c1/*
+  X-Robots-Tag: noindex
+
+/p/*
+  X-Robots-Tag: noindex
