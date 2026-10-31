@@ -1,0 +1,118 @@
+# Tracked short links for channel attribution in GA4
+# Pattern: /<channel-slug> → /?utm_source=<channel>&utm_medium=<medium>&utm_campaign=<placement>
+# Use these in bios, signatures, end-cards. Order matters: must come before SPA catchall.
+/tt   /?utm_source=tiktok&utm_medium=social&utm_campaign=bio_text     301!
+/li   /?utm_source=linkedin&utm_medium=social&utm_campaign=bio        301!
+/fb   /?utm_source=facebook&utm_medium=social&utm_campaign=bio        301!
+/yt   /?utm_source=youtube&utm_medium=social&utm_campaign=bio         301!
+/ig   /?utm_source=instagram&utm_medium=social&utm_campaign=bio       301!
+/em   /?utm_source=email&utm_medium=email&utm_campaign=signature      301!
+# Reddit posts under u/Calmfornia. Separate slugs so a comment link and a post
+# link can be told apart — on Reddit those behave very differently.
+/rd   /?utm_source=reddit&utm_medium=social&utm_campaign=post          301!
+/rdc  /?utm_source=reddit&utm_medium=social&utm_campaign=comment       301!
+
+# PWA "Add to Home Screen" assets for a public card, proxied from the API.
+# These must be served from this origin, not api.digitalqrcard.com: Chrome
+# rejects a manifest whose start_url sits on a different origin than the
+# manifest file. Backend routes live in dbc-be/routes/cards.js.
+/c/:id/manifest.webmanifest  https://api.digitalqrcard.com/cards/:id/manifest.webmanifest  200
+/c/:id/icon-192.png          https://api.digitalqrcard.com/cards/:id/icon/192              200
+/c/:id/icon-512.png          https://api.digitalqrcard.com/cards/:id/icon/512              200
+
+# SPA fallback — must stay last
+# Old paths still linked from sent emails and older builds. Without these
+# they would now reach the not-found page.
+/subscription               /pricing                 301
+/subscription/*             /pricing                 301
+/settings/voice             /profile/voice           301
+/subscription-reactivated   /subscription-updated    301
+
+# App routes: served by the single-page app with a 200. Keep in step with
+# src/routes/index.tsx; src/__tests__/redirects.test.ts fails if a route
+# is missing here. Real files (prerendered pages, robots.txt, the service
+# worker) are served before these rules.
+/about                   /index.html   200
+/about/*                 /index.html   200
+/admin                   /index.html   200
+/admin/*                 /index.html   200
+/blog                    /index.html   200
+/blog/*                  /index.html   200
+/c                       /index.html   200
+/c/*                     /index.html   200
+/c1                      /index.html   200
+/c1/*                    /index.html   200
+/cancel                  /index.html   200
+/cancel/*                /index.html   200
+/card-creation-guide     /index.html   200
+/card-creation-guide/*   /index.html   200
+/cards                   /index.html   200
+/cards/*                 /index.html   200
+/careers                 /index.html   200
+/careers/*               /index.html   200
+/contact                 /index.html   200
+/contact/*               /index.html   200
+/contacts                /index.html   200
+/contacts/*              /index.html   200
+/dashboard               /index.html   200
+/dashboard/*             /index.html   200
+/economics               /index.html   200
+/economics/*             /index.html   200
+/faq                     /index.html   200
+/faq/*                   /index.html   200
+/feedback                /index.html   200
+/feedback/*              /index.html   200
+/for                     /index.html   200
+/for/*                   /index.html   200
+/forgot-password         /index.html   200
+/forgot-password/*       /index.html   200
+/founding-member         /index.html   200
+/founding-member/*       /index.html   200
+/founding-member-state   /index.html   200
+/founding-member-state/* /index.html   200
+/help                    /index.html   200
+/help/*                  /index.html   200
+/login                   /index.html   200
+/login/*                 /index.html   200
+/maintenance             /index.html   200
+/maintenance/*           /index.html   200
+/p                       /index.html   200
+/p/*                     /index.html   200
+/podcast                 /index.html   200
+/podcast/*               /index.html   200
+/pricing                 /index.html   200
+/pricing/*               /index.html   200
+/privacy                 /index.html   200
+/privacy/*               /index.html   200
+/profile                 /index.html   200
+/profile/*               /index.html   200
+/register                /index.html   200
+/register/*              /index.html   200
+/reset-password          /index.html   200
+/reset-password/*        /index.html   200
+/subscription-canceled   /index.html   200
+/subscription-canceled/* /index.html   200
+/subscription-policy     /index.html   200
+/subscription-policy/*   /index.html   200
+/subscription-updated    /index.html   200
+/subscription-updated/*  /index.html   200
+/success                 /index.html   200
+/success/*               /index.html   200
+/support                 /index.html   200
+/support/*               /index.html   200
+/team                    /index.html   200
+/team/*                  /index.html   200
+/terms-of-service        /index.html   200
+/terms-of-service/*      /index.html   200
+/tools                   /index.html   200
+/tools/*                 /index.html   200
+/unsubscribe             /index.html   200
+/unsubscribe/*           /index.html   200
+/verify-email            /index.html   200
+/verify-email/*          /index.html   200
+/webpages                /index.html   200
+/webpages/*              /index.html   200
+
+# Anything else: the app shows its not-found page, with a 404 status, so
+# dead and mistyped links are not indexed as copies of the homepage.
+/*                       /index.html   404

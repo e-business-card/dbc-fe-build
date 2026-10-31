@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" class="ribbon-visible" dir="ltr" style="--ribbon-height: 45px; --header-height: 109px;"><head>
+    <!-- Google Tag Manager, only with tracking consent -->
+    <script defer="" src="/gtm-consent.js"></script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="author" content="Digital QR Card">
+    
+    <meta name="keywords" content="digital business card, qr business card, electronic business card, digital networking card, vcard, nfc business card, contactless business card, digital card for realtors, digital card for salespeople">
+    <!-- The site-wide robots default lives in src/App.tsx, not here.
+         react-helmet-async only replaces meta tags it rendered itself, so a
+         static tag in this shell survives alongside anything a page sets
+         later. A card page asking for noindex would leave the head carrying
+         both that and an "index, follow" from here, which is a contradiction
+         resolved by crawler precedence rather than by us. -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Digital QR Card">
+    
+    
+    <meta property="og:image" content="https://www.digitalqrcard.com/og-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Digital QR Card: one tap shares your whole profile">
+
+    <!-- Twitter -->
+    <!-- Twitter reads name=, not property=. A property= tag is ignored. -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    
+    <meta name="twitter:image" content="https://www.digitalqrcard.com/og-default.png">
+
+    <!--
+      Entity graph, one owner per entity. Lives here because it describes the
+      company, so it is correct on every route. Do not repeat these nodes in
+      page-level Helmet blocks: a second SoftwareApplication or WebSite with
+      no @id is a duplicate, not an addition.
+      The address is locality-level on purpose. The street address is not
+      published on the site, and a unit-level address on a residence is not
+      something to expose in markup.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.digitalqrcard.com/#organization",
+            "name": "Digital QR Card",
+            "url": "https://www.digitalqrcard.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.digitalqrcard.com/logo.png",
+              "width": 512,
+              "height": 512
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Carlsbad",
+              "addressRegion": "CA",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-760-481-7943",
+              "contactType": "Customer Support"
+            },
+            "sameAs": [
+              "https://www.facebook.com/digitalqrcard",
+              "https://www.youtube.com/@DigitalQRCard",
+              "https://www.instagram.com/digitalqrcard",
+              "https://www.linkedin.com/company/digitalqrcard"
+            ],
+            "description": "Digital QR Card makes customizable QR-based digital business cards for professionals. Replace paper cards with a scannable, updatable digital identity."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.digitalqrcard.com/#website",
+            "url": "https://www.digitalqrcard.com/",
+            "name": "Digital QR Card",
+            "publisher": {
+              "@id": "https://www.digitalqrcard.com/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://www.digitalqrcard.com/#software",
+            "name": "Digital QR Card",
+            "operatingSystem": "Web",
+            "applicationCategory": "BusinessApplication",
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Free",
+                "price": "0",
+                "priceCurrency": "USD",
+                "description": "One digital card with unlimited sharing. No subscription."
+              },
+              {
+                "@type": "Offer",
+                "name": "Pro Lifetime",
+                "price": "29",
+                "priceCurrency": "USD",
+                "description": "One-time payment for lifetime Pro access. No subscription."
+              },
+              {
+                "@type": "Offer",
+                "name": "Starter Crew (3 seats)",
+                "price": "99",
+                "priceCurrency": "USD",
+                "description": "One-time team pack, 3 seats, each with Pro features."
+              },
+              {
+                "@type": "Offer",
+                "name": "Family Pack (5 seats)",
+                "price": "149",
+                "priceCurrency": "USD",
+                "description": "One-time team pack, 5 seats, each with Pro features."
+              },
+              {
+                "@type": "Offer",
+                "name": "Crew Ten (10 seats)",
+                "price": "249",
+                "priceCurrency": "USD",
+                "description": "One-time team pack, 10 seats, each with Pro features."
+              }
+            ],
+            "description": "A digital business card that shares your full profile in one tap. Track scans, update info instantly, and replace paper cards forever."
+          }
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://api.digitalqrcard.com">
+
+    <!-- Preload Hero Image (WebP preferred) -->
+    <link rel="preload" as="image" href="/images/hero-card.webp" fetchpriority="high" type="image/webp">
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;family=Poppins:wght@400;600;700&amp;display=swap">
+    <!-- A plain stylesheet: the print-then-onload trick is an inline handler,
+         which the Content Security Policy does not allow. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;family=Poppins:wght@400;600;700&amp;display=swap">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Economics | Digital QR Card</title>
+    <script type="module" crossorigin="" src="/assets/index-CABArDlo.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/assets/vendor-DFXNMGXD.js">
+    <link rel="stylesheet" crossorigin="" href="/assets/index-C4_DSdfj.css">
+  <style id="_goober"> @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style><link rel="modulepreload" as="script" crossorigin="" href="/assets/Economics-D6YBEVJi.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/PageMeta-DRiJ-mX3.js"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" data-rh="true"><link rel="canonical" href="https://www.digitalqrcard.com/economics" data-rh="true"><meta name="description" content="Explore the key metrics of Digital QR Card's subscription business: TAM, SAM, SOM, CAC, LTV, and Payback." data-rh="true"><meta property="og:url" content="https://www.digitalqrcard.com/economics" data-rh="true"><meta property="og:title" content="Subscription Economics | Digital QR Card" data-rh="true"><meta property="og:description" content="Explore the key metrics of Digital QR Card's subscription business: TAM, SAM, SOM, CAC, LTV, and Payback." data-rh="true"><meta name="twitter:title" content="Subscription Economics | Digital QR Card" data-rh="true"><meta name="twitter:description" content="Explore the key metrics of Digital QR Card's subscription business: TAM, SAM, SOM, CAC, LTV, and Payback." data-rh="true"></head>
+
+  <body data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0">
+    <div id="root"><header class="_header_1dhgk_2"><div class="fixed top-0 inset-x-0 z-50 flex items-center justify-between relative" style="background-color: rgb(255, 243, 205); color: rgb(133, 100, 4); text-align: center; padding: 8px 10px; font-size: 0.85rem; border-bottom: 1px solid rgb(255, 238, 186); font-weight: 500;"><span class="flex-1 text-center">Price drop: Pro Lifetime is now $29 until November 9, then back to $45. Free now includes 2 cards. <a href="/pricing" class="underline hover:text-yellow-900 font-semibold">See the plans →</a></span><button class="ml-3 text-yellow-800 hover:text-yellow-900 focus:outline-none p-1" aria-label="Dismiss notification" style="background: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div><div class="_navContainer_1dhgk_18"><a class="_logo_1dhgk_27" aria-label="DigitalQRCard Home" href="/" data-discover="true"><img src="/assets/logo_150-BYCEwisQ.png" alt="DigitalQRCard Logo" width="40" height="40"> DigitalQRCard</a><button class="_mobileToggle_1dhgk_129" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 12h16"></path><path d="M4 18h16"></path><path d="M4 6h16"></path></svg></button><nav class="_navLinks_1dhgk_37 " aria-label="Main navigation"><a class="_navLink_1dhgk_37" href="/about" data-discover="true">About</a><a class="_navLink_1dhgk_37" href="/careers" data-discover="true">Careers</a><a class="_navLink_1dhgk_37" href="/pricing" data-discover="true">Pricing</a><a class="_navLink_1dhgk_37" href="/team/buy" data-discover="true">Teams</a><a class="_navLink_1dhgk_37" href="/blog" data-discover="true">Blog</a><a class="_navLink_1dhgk_37" href="/contact" data-discover="true">Contact</a><div class="_navLink_1dhgk_37" style="padding: 0px; display: inline-flex; align-items: center; position: relative; gap: 0.25rem;"><select id="language-select" class="form-select form-select-sm d-inline-block w-auto" style="border: 0.1rem solid rgb(96, 165, 250); background: url(&quot;data:image/svg+xml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDggMTIiIHdpZHRoPSI4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00IDhsNC00SDB6Ii8+PC9zdmc+&quot;) right 0.5rem center / 0.75rem no-repeat transparent; padding: 0.25rem 2rem 0.25rem 0.75rem; appearance: none; min-width: 4rem;"><option value="en">English</option><option value="ar">العربية</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="hi">हिन्दी</option><option value="it">Italiano</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="pt">Português</option><option value="ru">Русский</option><option value="zh">中文</option><option value="id">Bahasa Indonesia</option></select></div><a class="_navLink_1dhgk_37" href="/login" data-discover="true">Login</a></nav></div></header><main class="transition-all duration-300 page-fade"><section class="p-10" style="padding: 40px 20px; max-width: 1000px; margin: 0px auto;"><header class="section-header"><h1 style="font-size: 28px; font-weight: 700; margin-bottom: 8px;">Subscription Economics</h1><p style="font-size: 16px; color: rgb(68, 68, 68);">Estimate TAM, SAM, SOM, CAC, LTV, and Payback period for your Digital QR Card subscription plan.</p></header><div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 30px 0px;"><div style="background: rgb(255, 255, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; flex: 1 1 250px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(79, 70, 229); font-size: 40px; margin-bottom: 10px;"><path d="M400 0H48C22.4 0 0 22.4 0 48v416c0 25.6 22.4 48 48 48h352c25.6 0 48-22.4 48-48V48c0-25.6-22.4-48-48-48zM128 435.2c0 6.4-6.4 12.8-12.8 12.8H76.8c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4zm0-128c0 6.4-6.4 12.8-12.8 12.8H76.8c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4zm128 128c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4zm0-128c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4zm128 128c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8V268.8c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v166.4zm0-256c0 6.4-6.4 12.8-12.8 12.8H76.8c-6.4 0-12.8-6.4-12.8-12.8V76.8C64 70.4 70.4 64 76.8 64h294.4c6.4 0 12.8 6.4 12.8 12.8v102.4z"></path></svg><h3 style="font-size: 18px; font-weight: 600; margin-bottom: 6px;">Interactive Calculator</h3><p style="font-size: 14px; color: rgb(68, 68, 68);">Input your numbers and instantly see TAM, SAM, SOM, CAC, LTV, and Payback.</p></div><div style="background: rgb(255, 255, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; flex: 1 1 250px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(22, 163, 74); font-size: 40px; margin-bottom: 10px;"><path d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"></path></svg><h3 style="font-size: 18px; font-weight: 600; margin-bottom: 6px;">Visual Growth Insights</h3><p style="font-size: 14px; color: rgb(68, 68, 68);">Understand your potential market size and revenue projections at a glance.</p></div><div style="background: rgb(255, 255, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; flex: 1 1 250px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 288 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(245, 158, 11); font-size: 40px; margin-bottom: 10px;"><path d="M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"></path></svg><h3 style="font-size: 18px; font-weight: 600; margin-bottom: 6px;">Financial Viability</h3><p style="font-size: 14px; color: rgb(68, 68, 68);">Check if your subscription model is profitable and how fast you can recoup your investment.</p></div></div><div style="background: rgb(249, 249, 249); padding: 20px; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px; margin-top: 20px; transition: opacity 0.6s, transform 0.6s; opacity: 1; transform: translateY(0px);"><div style="max-width: 900px; margin: 0px auto; padding: 20px;"><div style="background: rgb(255, 255, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; margin-bottom: 20px;"><h1 style="font-size: 24px; font-weight: 700; margin-bottom: 10px;">Digital QR Card — Subscription Economics Calculator</h1><p style="font-size: 14px; color: rgb(85, 85, 85); margin-bottom: 20px;">Edit inputs and see TAM, SAM, SOM, CAC, LTV and Payback instantly.</p><div><label title="Total Addressable Market: all potential users globally." style="display: flex; flex-direction: column; margin-bottom: 10px; font-size: 14px; font-weight: 500;">Total Potential Users<input type="number" step="1" value="500000000" style="padding: 8px; border-radius: 6px; border: 1px solid rgb(204, 204, 204); margin-top: 5px;"></label><label title="Serviceable Addressable Market: users you can realistically target." style="display: flex; flex-direction: column; margin-bottom: 10px; font-size: 14px; font-weight: 500;">Reachable Users<input type="number" step="1" value="10000000" style="padding: 8px; border-radius: 6px; border: 1px solid rgb(204, 204, 204); margin-top: 5px;"></label><label title="Share of SAM you expect to capture in 2–3 years." style="display: flex; flex-direction: column; margin-bottom: 10px; font-size: 14px; font-weight: 500;">Target Share Percent<input type="number" step="1" value="1" style="padding: 8px; border-radius: 6px; border: 1px solid rgb(204, 204, 204); margin-top: 5px;"></label><label title="Monthly subscription price per user." style="display: flex; flex-direction: column; margin-bottom: 10px; font-size: 14px; font-weight: 500;">Monthly Price<input type="number" step="0.5" value="5" style="padding: 8px; border-radius: 6px; border: 1px solid rgb(204, 204, 204); margin-top: 5px;"></label><label title="Average time a user stays subscribed." style="display: flex; flex-direction: column; margin-bottom: 10px; font-size: 14px; font-weight: 500;">Avg Lifetime Months<input type="number" step="1" value="12" style="padding: 8px; border-radius: 6px; border: 1px solid rgb(204, 204, 204); margin-top: 5px;"></label><label title="Budget for acquiring new users per month." style="display: flex; flex-direction: column; margin-bottom: 10px; font-size: 14px; font-weight: 500;">Monthly Marketing Spend<input type="number" step="1" value="5000" style="padding: 8px; border-radius: 6px; border: 1px solid rgb(204, 204, 204); margin-top: 5px;"></label><label title="Number of new users expected from your marketing spend." style="display: flex; flex-direction: column; margin-bottom: 10px; font-size: 14px; font-weight: 500;">New Customers Per Month<input type="number" step="1" value="500" style="padding: 8px; border-radius: 6px; border: 1px solid rgb(204, 204, 204); margin-top: 5px;"></label></div><div style="margin-top: 20px;"><div style="padding: 12px; border-radius: 8px; border: 1px solid rgb(204, 204, 204); margin-bottom: 10px;"><div style="font-size: 12px; color: rgb(102, 102, 102);">TAM (annual $)</div><div style="font-size: 18px; font-weight: 600; margin-top: 4px;">$30.00B</div><div style="font-size: 12px; color: rgb(153, 153, 153); margin-top: 2px;">500,000,000 users × $60.00</div></div><div style="padding: 12px; border-radius: 8px; border: 1px solid rgb(204, 204, 204); margin-bottom: 10px;"><div style="font-size: 12px; color: rgb(102, 102, 102);">SAM (annual $)</div><div style="font-size: 18px; font-weight: 600; margin-top: 4px;">$600.00M</div><div style="font-size: 12px; color: rgb(153, 153, 153); margin-top: 2px;">10,000,000 users × $60.00</div></div><div style="padding: 12px; border-radius: 8px; border: 1px solid rgb(204, 204, 204); margin-bottom: 10px;"><div style="font-size: 12px; color: rgb(102, 102, 102);">SOM (annual $)</div><div style="font-size: 18px; font-weight: 600; margin-top: 4px;">$6.00M</div><div style="font-size: 12px; color: rgb(153, 153, 153); margin-top: 2px;">100,000 users (~1% of SAM)</div></div><div style="padding: 12px; border-radius: 8px; border: 1px solid rgb(76, 175, 80); margin-bottom: 10px;"><div style="font-size: 12px; color: rgb(102, 102, 102);">CAC ($)</div><div style="font-size: 18px; font-weight: 600; margin-top: 4px;">$10</div><div style="font-size: 12px; color: rgb(153, 153, 153); margin-top: 2px;">Marketing $5000 / 500 new users</div></div><div style="padding: 12px; border-radius: 8px; border: 1px solid rgb(204, 204, 204); margin-bottom: 10px;"><div style="font-size: 12px; color: rgb(102, 102, 102);">LTV ($)</div><div style="font-size: 18px; font-weight: 600; margin-top: 4px;">$60</div><div style="font-size: 12px; color: rgb(153, 153, 153); margin-top: 2px;">$5 × 12 mo</div></div><div style="padding: 12px; border-radius: 8px; border: 1px solid rgb(76, 175, 80); margin-bottom: 10px;"><div style="font-size: 12px; color: rgb(102, 102, 102);">Payback (months)</div><div style="font-size: 18px; font-weight: 600; margin-top: 4px;">2 mo</div><div style="font-size: 12px; color: rgb(153, 153, 153); margin-top: 2px;">CAC ÷ $5</div></div><div style="padding: 12px; background: rgb(249, 249, 249); border-radius: 8px; margin-top: 10px;"><h3 style="margin: 0px 0px 4px;">Unit economics</h3><p style="margin: 0px;">LTV : CAC = <span style="font-weight: 600; color: rgb(76, 175, 80);">60:10</span> (6:1)</p><p style="font-size: 12px; color: rgb(136, 136, 136); margin-top: 4px;">Rule of thumb: LTV should be ≥ 3 × CAC. Higher is better.</p></div></div><div style="margin-top: 20px;"><button style="padding: 10px 16px; background: rgb(79, 70, 229); color: rgb(255, 255, 255); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; border-radius: 8px; cursor: pointer; margin-right: 10px;">Copy inputs as JSON</button><button style="padding: 10px 16px; background: rgb(255, 255, 255); color: rgb(51, 51, 51); border: 1px solid rgb(204, 204, 204); border-radius: 8px; cursor: pointer;">Reset to defaults</button></div></div></div></div><div style="text-align: center; background: rgb(79, 70, 229); color: rgb(255, 255, 255); padding: 40px 20px; border-radius: 12px; margin-top: 40px; transition: transform 0.3s;"><h2 style="font-size: 24px; font-weight: 600; margin-bottom: 12px;">Invest in Digital QR Card</h2><p style="font-size: 16px; margin-bottom: 16px;">Discover the potential of our subscription model and explore investment opportunities with Digital QR Card.</p><a href="/contact" style="background: rgb(255, 255, 255); color: rgb(79, 70, 229); padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: background 0.3s;">Contact Us for Investment</a></div></section></main><div class="cookie-banner" role="region" aria-label="Cookie preferences"><div class="cookie-banner__inner"><div class="cookie-banner__text"><strong>We use cookies</strong><p class="cookie-banner__desc">In order to provide you with the best experience, we use some cookies on our website. Using our site means you are aware that we are using cookies and grant us permission to do so. You may change these permissions any time. <a class="cookie-banner__link" href="/privacy" data-discover="true">Learn more</a></p><div class="cookie-banner__mini-prefs" aria-hidden="false"><label class="cookie-banner__mini-label">Tracking cookies</label><label class="switch"><input type="checkbox" aria-checked="true" checked=""><span class="slider"></span></label><button class="btn btn-link cookie-banner__settings">Settings</button></div></div><div class="cookie-banner__actions"><button class="btn btn-primary btn-sm">Accept</button></div></div><style>
+        .cookie-banner { position: fixed; left: 12px; right: 12px; bottom: env(safe-area-inset-bottom, 12px); z-index: 1300; display:flex; justify-content:center; }
+        .cookie-banner__inner { max-width:1100px; width:100%; background: linear-gradient(90deg,#ffffff,#fbfdfd); border-radius:12px; box-shadow:0 12px 36px rgba(2,6,23,0.12); padding:16px; display:flex; gap:16px; align-items:flex-start; }
+        .cookie-banner__text { flex:1; }
+        .cookie-banner__desc { margin:6px 0 10px; color:#334155; max-width:56rem; }
+        .cookie-banner__link { color:inherit; text-decoration:underline; }
+        .cookie-banner__prefs { display:flex; flex-direction:column; gap:12px; }
+        .cookie-banner__pref { display:flex; justify-content:space-between; gap:12px; align-items:center; }
+        .cookie-banner__pref-left { flex:1; }
+        .cookie-banner__pref-title { font-weight:600; }
+        .cookie-banner__pref-desc { font-size:0.9rem; color:#475569; }
+        .cookie-banner__mini-prefs { display:flex; gap:12px; align-items:center; margin-top:8px; }
+        .cookie-banner__mini-label { font-size:0.9rem; color:#475569; margin-right:6px; }
+        .cookie-banner__actions { display:flex; gap:8px; align-items:center; margin-left:12px; }
+        .cookie-banner__settings { color:var(--bs-primary); background:transparent; border:none; padding:0; text-decoration:underline; cursor:pointer }
+        .cookie-banner__settings:focus { outline: 2px solid rgba(59,130,246,0.25); border-radius:6px; }
+
+        /* toggle switch */
+        .switch { position: relative; display: inline-block; width:44px; height:26px; }
+        .switch input { opacity:0; width:0; height:0; }
+        .slider { position:absolute; cursor:pointer; top:0; left:0; right:0; bottom:0; background:#e6e8eb; transition:.2s; border-radius:999px; }
+        .slider:before { position:absolute; content:""; height:20px; width:20px; left:3px; top:3px; background:white; box-shadow:0 1px 3px rgba(2,6,23,0.2); transition:.2s; border-radius:50%; }
+        input:checked + .slider { background: linear-gradient(90deg,#3b82f6,#06b6d4); }
+        input:checked + .slider:before { transform: translateX(18px); }
+        input[disabled] + .slider { opacity:0.6; cursor:not-allowed; }
+
+        @media (max-width:720px){ .cookie-banner__inner { flex-direction:column; align-items:stretch; } .cookie-banner__actions { justify-content:flex-end; margin-left:0; } }
+      </style></div><footer class="footer"><style>
+.link-anim{display:inline-block;transform:translateZ(0);transition:transform 160ms cubic-bezier(.2,.8,.2,1),color 160ms;will-change:transform}
+.link-anim:focus{outline:none}
+.link-anim:focus-visible{box-shadow:0 0 0 3px rgba(0,123,255,0.18);border-radius:4px}
+.link-anim:hover,.link-anim:focus-visible{transform:translateX(6px)}
+@media (prefers-reduced-motion:reduce){.link-anim{transition:none!important;transform:none!important}}
+</style><div class="footer-top"><div class="container"><div class="row gy-4"><div class="col-lg-3 col-md-12 footer-info"><a class="logo d-flex align-items-center" aria-label="DigitalQRCard Home" href="/" data-discover="true"><img src="/assets/logo_150-BYCEwisQ.png" alt="Digital QR Business Card logo" width="40" height="40"></a><h4>DigitalQRCard</h4><p>We empower your brand with digital cards that click, connect, and convert.</p><div class="footer-links mt-4"><ul><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/founding-member" data-discover="true">Claim Your Founding Membership</a></li></ul></div><hr><img width="250" height="100" src="/assets/StripeLogo-CfCTV2xO.png" alt="guaranteed safe &amp; secure checkout by stripe" style="max-width: 100%; height: auto; display: block;"><a href="https://elevenlabs.io/startup-grants" target="_blank" rel="noopener noreferrer" aria-label="Powered by ElevenLabs Grants" style="display: inline-block; margin-top: 16px;"><img src="https://eleven-public-cdn.elevenlabs.io/payloadcms/pwsc4vchsqt-ElevenLabsGrants.webp" alt="ElevenLabs Grants" width="250" height="71" loading="lazy" style="max-width: 100%; height: auto; display: block;"></a></div><div class="col-lg-2 col-6 footer-links"><h4>Useful Links</h4><ul><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/about" data-discover="true">About us</a>&nbsp; | &nbsp;<a class="link-anim" href="/careers" data-discover="true">Careers</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/contact" data-discover="true">Contact</a>&nbsp; | &nbsp;<a class="link-anim" href="/support" data-discover="true">Support</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/blog" data-discover="true">Blog</a>&nbsp; | &nbsp;<a class="link-anim" href="/podcast/networking-pulse" data-discover="true">Podcast</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/terms-of-service" data-discover="true">Terms of service</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/privacy" data-discover="true">Privacy policy</a></li><li><i class="bi bi-chevron-right"></i> <a href="#" class="link-anim" aria-label="Open cookie settings">Manage cookies</a></li><li><i class="bi bi-chevron-right"></i> <a href="#" role="button" class="link-anim">Report a problem</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/faq" data-discover="true">F.A.Q</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/login" data-discover="true">Login</a>&nbsp; | &nbsp;<a class="link-anim" href="/register" data-discover="true">Sign Up</a></li></ul><img width="120" height="60" src="/assets/let-s-encrypt-D77t6W8E.png" alt="Let's Encrypt is a certificate authority (CA)"></div><div class="col-lg-2 col-6 footer-links"><h4>Our Services</h4><ul><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/login" data-discover="true">Business Card</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/login" data-discover="true">Flyers</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/login" data-discover="true">Classified Ads</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/subscription-policy" data-discover="true">Payment &amp; refunds</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/economics" data-discover="true">Subscription Economics</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/card-creation-guide" data-discover="true">Card Creation Guide</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/tools/qr-generator" data-discover="true">Free QR Code Creator</a></li></ul></div><div class="col-lg-2 col-6 footer-links"><h4>For your profession</h4><ul><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/realtors" data-discover="true">Real Estate Agents</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/sales" data-discover="true">Sales Reps</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/financial-advisors" data-discover="true">Financial Advisors</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/insurance" data-discover="true">Insurance Agents</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/mortgage" data-discover="true">Mortgage Brokers</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/photographers" data-discover="true">Photographers</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/business-owners" data-discover="true">Business Owners</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/teams" data-discover="true">Teams</a></li></ul></div><div class="col-lg-3 col-md-12 footer-contact text-center text-md-start"><h4>Contact Us</h4>Carlsbad California USA<br><strong>Phone:</strong> +1 (760) 481-4120<br><strong>Email:</strong> <a href="mailto:support@digitalqrcard.com">support@digitalqrcard.com</a><div class="social-links mt-3"><a href="https://www.facebook.com/digitalqrcard" class="link-anim facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="https://www.youtube.com/@DigitalQRCard" class="link-anim youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube bx bxl-youtube"></i></a><a href="https://www.instagram.com/digitalqrcard/" class="link-anim instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="https://www.linkedin.com/company/digitalqrcard" class="link-anim linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><hr>Your opinion matters! Help others by sharing your experience on<a href="https://www.trustpilot.com/review/digitalqrcard.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.trustpilot.net/brand-assets/4.3.0/logo-black.svg" alt="Trustpilot" style="height: 24px; margin-left: 8px;"></a><div class="small text-muted mt-2">Non-personalized ads</div></div></div></div></div></div><div class="copyright">© 2024-2026 Copyright. All Rights Reserved</div><div class="credits">Made with <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red; margin: 0px 6px;"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg> by <a aria-label="GitHub Profile" href="https://github.com/tounsils"><span class="bi bi-github"></span> tounsils </a> using React <i class="ri-reactjs-line"></i><br>Version 3.215 -  Last update October 2026</div></footer><div id="_rht_toaster" style="position: fixed; z-index: 9999; top: calc(72px + var(--ribbon-height, 0px)); left: 16px; right: 16px; bottom: 16px; pointer-events: none;"></div></div>
+  
+
+</body></html>

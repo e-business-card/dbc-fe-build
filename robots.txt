@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Do not add Disallow rules for /c/, /c1/ or /p/. It looks like the obvious
+# thing to do, because those paths publish a customer's phone number and
+# email and are deliberately kept out of the search index. It would break it.
+#
+# robots.txt controls CRAWLING, not indexing. Blocking a path stops Google
+# fetching it, which means Google never reads the noindex that actually
+# removes the page, and a blocked URL can still be listed as a bare link with
+# no snippet if anything out there points at it. The directive doing the real
+# work is X-Robots-Tag: noindex, served from public/_headers and mirrored in
+# the HTML by src/components/seo/NoIndex.tsx. It only reaches the crawler if
+# the crawler is allowed in.
+#
+# Verified live 2026-09-22: /c/, /c1/ and /p/ return X-Robots-Tag: noindex,
+# and / and /pricing return no such header.
+#
+#   curl -sI https://www.digitalqrcard.com/c/<any-card-id> | grep -i x-robots
+
+Sitemap: https://www.digitalqrcard.com/sitemap.xml
