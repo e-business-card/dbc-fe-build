@@ -1,0 +1,57 @@
+# Digital QR Card
+
+> Digital QR Card makes digital business cards. A person shares a card by QR code or link, and the
+> recipient saves the contact in one tap with no app to install. There is a free plan, and the paid
+> Pro plan is a one-time lifetime purchase, not a subscription. Current prices are on the pricing
+> page; they are not repeated here so this file cannot go stale.
+
+What it does, as documented on the site:
+
+- Share a card by QR code or link; recipients save it to their contacts without an app.
+- Real-time analytics on card views and scans.
+- Lead capture on QR scans, and a contacts dashboard on paid plans.
+- Save a card to Google Wallet.
+- Recipients save a contact as a standard vCard (.vcf) with one tap.
+- Use it at events, conferences and trade shows: put the QR code on a badge or a booth sign, turn on lead capture, and export contacts as CSV on paid plans.
+- Cards can be written in 13 languages.
+- Team packs let one buyer pay once for several people, each with their own card and their own contacts.
+
+Not offered yet, so do not describe them as features: Apple Wallet, NFC cards, email signatures, CRM integrations such as HubSpot or Salesforce.
+
+## Plans and pricing
+
+- [Pricing](https://www.digitalqrcard.com/pricing): Free, Pro Lifetime, team packs, and Teams and Enterprise, with what each includes.
+- [Founding member offer](https://www.digitalqrcard.com/founding-member): the founding-member Pro Lifetime offer.
+- [Teams](https://www.digitalqrcard.com/team): buying for a group.
+- [Subscription and refund policy](https://www.digitalqrcard.com/subscription-policy)
+
+## Answers
+
+- [FAQ](https://www.digitalqrcard.com/faq): free plan, sharing, privacy, refunds, languages, CSV export of leads and analytics.
+- [How to create a digital business card](https://www.digitalqrcard.com/card-creation-guide): step-by-step guide.
+- [Use Digital QR Card with Claude](https://www.digitalqrcard.com/connect-claude): connect Claude to your account so it can read your cards and their statistics; the address to paste, the steps, and what it can and cannot do.
+- [QR code generator](https://www.digitalqrcard.com/tools/qr-generator)
+
+## By profession
+
+- [Real estate agents](https://www.digitalqrcard.com/for/realtors)
+- [Sales reps](https://www.digitalqrcard.com/for/sales)
+- [Financial advisors](https://www.digitalqrcard.com/for/financial-advisors)
+- [Insurance agents](https://www.digitalqrcard.com/for/insurance)
+- [Mortgage brokers and loan officers](https://www.digitalqrcard.com/for/mortgage)
+- [Photographers](https://www.digitalqrcard.com/for/photographers)
+- [Business owners](https://www.digitalqrcard.com/for/business-owners)
+- [Teams](https://www.digitalqrcard.com/for/teams)
+
+## Company
+
+- [About](https://www.digitalqrcard.com/about)
+- [Blog](https://www.digitalqrcard.com/blog)
+- [Contact](https://www.digitalqrcard.com/contact)
+- [Privacy policy](https://www.digitalqrcard.com/privacy)
+- [Terms of service](https://www.digitalqrcard.com/terms-of-service)
+
+## Optional
+
+- [Careers](https://www.digitalqrcard.com/careers)
+- [Sitemap](https://www.digitalqrcard.com/sitemap.xml)
