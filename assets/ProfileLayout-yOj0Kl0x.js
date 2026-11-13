@@ -1,0 +1,1 @@
+import{j as t}from"./index-CGRrmX6o.js";import{S as r}from"./SidebarLayout-CsTioS-5.js";import{O as o}from"./vendor-DFXNMGXD.js";import"./proxy-B0YgcEEl.js";const a=()=>t.jsx(r,{fluid:!0,noSection:!0,children:t.jsx(o,{})});export{a as default};

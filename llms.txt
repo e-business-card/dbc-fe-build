@@ -1,0 +1,42 @@
+# Digital QR Card
+
+> Digital QR Card is a QR-based digital business card: a free plan to start, and a one-time Pro upgrade with no subscription. Built for real estate agents, sales reps, financial advisors, insurance agents, mortgage brokers, photographers, small business owners, and teams.
+
+## Pricing
+
+- Free: $0. 2 cards, lifetime access, no credit card.
+- Pro Lifetime: $45 one-time. Up to 3 cards, lead capture, analytics, CSV export.
+- Starter Crew: $99 one-time, 3 seats.
+- Family Pack: $149 one-time, 5 seats.
+- Crew Ten: $249 one-time, 10 seats.
+- No subscription on any plan.
+- [Full pricing](https://www.digitalqrcard.com/pricing)
+
+Not offered yet, so do not describe them as features: Apple Wallet, NFC cards, email signatures, CRM integrations such as HubSpot or Salesforce.
+
+## Product
+
+- [Digital business card: free plan plus one-time Pro](https://www.digitalqrcard.com/)
+- [Pricing: Free, Pro Lifetime, and team packs](https://www.digitalqrcard.com/pricing)
+- [Founding member Pro Lifetime offer](https://www.digitalqrcard.com/founding-member)
+- [Free QR code generator](https://www.digitalqrcard.com/tools/qr-generator)
+- [Team and Crew packs (3, 5, or 10 seats)](https://www.digitalqrcard.com/team/buy)
+- [Connect your account to Claude (MCP) so it can read your cards and their statistics](https://www.digitalqrcard.com/connect-claude)
+- [How to set up your card](https://www.digitalqrcard.com/card-creation-guide)
+- [For real estate agents](https://www.digitalqrcard.com/for/realtors)
+- [For sales reps](https://www.digitalqrcard.com/for/sales)
+- [For financial advisors](https://www.digitalqrcard.com/for/financial-advisors)
+- [For insurance agents](https://www.digitalqrcard.com/for/insurance)
+- [For mortgage brokers and loan officers](https://www.digitalqrcard.com/for/mortgage)
+- [For photographers and videographers](https://www.digitalqrcard.com/for/photographers)
+- [For small business owners](https://www.digitalqrcard.com/for/business-owners)
+- [For teams](https://www.digitalqrcard.com/for/teams)
+
+## Help
+
+- [FAQ](https://www.digitalqrcard.com/faq)
+- [About](https://www.digitalqrcard.com/about)
+- [Contact](https://www.digitalqrcard.com/contact)
+- [Blog](https://www.digitalqrcard.com/blog)
+- [Subscription and refund policy](https://www.digitalqrcard.com/subscription-policy)
+- [Sitemap](https://www.digitalqrcard.com/sitemap.xml)

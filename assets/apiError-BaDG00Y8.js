@@ -1,0 +1,1 @@
+const u=(t,o)=>{const f=(t==null?void 0:t.status)??0,a=t==null?void 0:t.data;if(f>=400&&f<500&&a&&typeof a=="object"){const i=a;for(const r of["error","message","msg"]){const c=i[r];if(typeof c=="string"&&c.trim())return c}}return o};export{u as a};
