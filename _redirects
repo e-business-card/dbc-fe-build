@@ -1,0 +1,125 @@
+# Tracked short links for channel attribution in GA4
+# Pattern: /<channel-slug> → /?utm_source=<channel>&utm_medium=<medium>&utm_campaign=<placement>
+# Use these in bios, signatures, end-cards. Order matters: must come before SPA catchall.
+/tt   /?utm_source=tiktok&utm_medium=social&utm_campaign=bio_text     301!
+/li   /?utm_source=linkedin&utm_medium=social&utm_campaign=bio        301!
+/fb   /?utm_source=facebook&utm_medium=social&utm_campaign=bio        301!
+/yt   /?utm_source=youtube&utm_medium=social&utm_campaign=bio         301!
+/ig   /?utm_source=instagram&utm_medium=social&utm_campaign=bio       301!
+/em   /?utm_source=email&utm_medium=email&utm_campaign=signature      301!
+# Reddit posts under u/Calmfornia. Separate slugs so a comment link and a post
+# link can be told apart — on Reddit those behave very differently.
+/rd   /?utm_source=reddit&utm_medium=social&utm_campaign=post          301!
+/rdc  /?utm_source=reddit&utm_medium=social&utm_campaign=comment       301!
+
+# PWA "Add to Home Screen" assets for a public card, proxied from the API.
+# These must be served from this origin, not api.digitalqrcard.com: Chrome
+# rejects a manifest whose start_url sits on a different origin than the
+# manifest file. Backend routes live in dbc-be/routes/cards.js.
+/c/:id/manifest.webmanifest  https://api.digitalqrcard.com/cards/:id/manifest.webmanifest  200
+/c/:id/icon-192.png          https://api.digitalqrcard.com/cards/:id/icon/192              200
+/c/:id/icon-512.png          https://api.digitalqrcard.com/cards/:id/icon/512              200
+
+# SPA fallback — must stay last
+# Old paths still linked from sent emails and older builds. Without these
+# they would now reach the not-found page.
+/subscription               /pricing                 301
+/subscription/*             /pricing                 301
+/settings/voice             /profile/voice           301
+/subscription-reactivated   /subscription-updated    301
+
+# App routes: served by the single-page app with a 200. Keep in step with
+# src/routes/index.tsx; src/__tests__/redirects.test.ts fails if a route
+# is missing here. Real files (prerendered pages, robots.txt, the service
+# worker) are served before these rules.
+/about                   /app-shell.html   200
+/about/*                 /app-shell.html   200
+/admin                   /app-shell.html   200
+/admin/*                 /app-shell.html   200
+/blog                    /app-shell.html   200
+/blog/*                  /app-shell.html   200
+/c                       /app-shell.html   200
+/c/*                     /app-shell.html   200
+/c1                      /app-shell.html   200
+/c1/*                    /app-shell.html   200
+/cancel                  /app-shell.html   200
+/cancel/*                /app-shell.html   200
+/card-creation-guide     /app-shell.html   200
+/card-creation-guide/*   /app-shell.html   200
+/connect-claude          /app-shell.html   200
+/connect-claude/*        /app-shell.html   200
+/new-home                /                        301
+/new-home/*              /                        301
+/cards                   /app-shell.html   200
+/cards/*                 /app-shell.html   200
+/careers                 /app-shell.html   200
+/careers/*               /app-shell.html   200
+/contact                 /app-shell.html   200
+/contact/*               /app-shell.html   200
+/contacts                /app-shell.html   200
+/contacts/*              /app-shell.html   200
+/dashboard               /app-shell.html   200
+/dashboard/*             /app-shell.html   200
+/economics               /app-shell.html   200
+/economics/*             /app-shell.html   200
+/faq                     /app-shell.html   200
+/faq/*                   /app-shell.html   200
+/feedback                /app-shell.html   200
+/feedback/*              /app-shell.html   200
+/for                     /app-shell.html   200
+/for/*                   /app-shell.html   200
+/forgot-password         /app-shell.html   200
+/forgot-password/*       /app-shell.html   200
+/founding-member         /app-shell.html   200
+/founding-member/*       /app-shell.html   200
+/founding-member-state   /app-shell.html   200
+/founding-member-state/* /app-shell.html   200
+/friends-family          /app-shell.html   200
+/friends-family/*        /app-shell.html   200
+/help                    /app-shell.html   200
+/help/*                  /app-shell.html   200
+/login                   /app-shell.html   200
+/login/*                 /app-shell.html   200
+/maintenance             /app-shell.html   200
+/maintenance/*           /app-shell.html   200
+/oauth/consent           /app-shell.html   200
+/p                       /app-shell.html   200
+/p/*                     /app-shell.html   200
+/podcast                 /app-shell.html   200
+/podcast/*               /app-shell.html   200
+/pricing                 /app-shell.html   200
+/pricing/*               /app-shell.html   200
+/privacy                 /app-shell.html   200
+/privacy/*               /app-shell.html   200
+/profile                 /app-shell.html   200
+/profile/*               /app-shell.html   200
+/register                /app-shell.html   200
+/register/*              /app-shell.html   200
+/reset-password          /app-shell.html   200
+/reset-password/*        /app-shell.html   200
+/subscription-canceled   /app-shell.html   200
+/subscription-canceled/* /app-shell.html   200
+/subscription-policy     /app-shell.html   200
+/subscription-policy/*   /app-shell.html   200
+/subscription-updated    /app-shell.html   200
+/subscription-updated/*  /app-shell.html   200
+/success                 /app-shell.html   200
+/success/*               /app-shell.html   200
+/support                 /app-shell.html   200
+/support/*               /app-shell.html   200
+/team                    /app-shell.html   200
+/team/*                  /app-shell.html   200
+/terms-of-service        /app-shell.html   200
+/terms-of-service/*      /app-shell.html   200
+/tools                   /app-shell.html   200
+/tools/*                 /app-shell.html   200
+/unsubscribe             /app-shell.html   200
+/unsubscribe/*           /app-shell.html   200
+/verify-email            /app-shell.html   200
+/verify-email/*          /app-shell.html   200
+/webpages                /app-shell.html   200
+/webpages/*              /app-shell.html   200
+
+# Anything else: the app shows its not-found page, with a 404 status, so
+# dead and mistyped links are not indexed as copies of the homepage.
+/*                       /index.html   404
