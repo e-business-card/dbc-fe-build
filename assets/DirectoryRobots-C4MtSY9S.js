@@ -1,0 +1,1 @@
+import{j as o,H as e}from"./index-DIyE2Hzy.js";import{i as n}from"./directory-CtSWRpMF.js";function i({approvedCount:t}){return n(t)?null:o.jsx(e,{children:o.jsx("meta",{name:"robots",content:"noindex, nofollow"})})}export{i as D};

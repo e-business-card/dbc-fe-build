@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en" class="ribbon-visible" dir="ltr" style="--ribbon-height: 45px; --header-height: 109px;"><head>
+    <!-- Google Tag Manager, only with tracking consent -->
+    <script defer="" src="/gtm-consent.js"></script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="author" content="Digital QR Card">
+    
+    <meta name="keywords" content="digital business card, qr business card, electronic business card, digital networking card, vcard, contactless business card, digital card for realtors, digital card for salespeople">
+    <!-- The site-wide robots default lives in src/App.tsx, not here.
+         react-helmet-async only replaces meta tags it rendered itself, so a
+         static tag in this shell survives alongside anything a page sets
+         later. A card page asking for noindex would leave the head carrying
+         both that and an "index, follow" from here, which is a contradiction
+         resolved by crawler precedence rather than by us. -->
+
+    <!-- Open Graph / Facebook -->
+    
+    <meta property="og:site_name" content="Digital QR Card">
+    
+    
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Digital QR Card: one tap shares your whole profile">
+
+    <!-- Twitter -->
+    <!-- Twitter reads name=, not property=. A property= tag is ignored. -->
+    
+    
+    
+    
+
+    <!--
+      Entity graph, one owner per entity. Lives here because it describes the
+      company, so it is correct on every route. Do not repeat these nodes in
+      page-level Helmet blocks: a second SoftwareApplication or WebSite with
+      no @id is a duplicate, not an addition.
+      The address is locality-level on purpose. The street address is not
+      published on the site, and a unit-level address on a residence is not
+      something to expose in markup.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.digitalqrcard.com/#organization",
+            "name": "Digital QR Card",
+            "url": "https://www.digitalqrcard.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.digitalqrcard.com/logo.png",
+              "width": 512,
+              "height": 512
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Carlsbad",
+              "addressRegion": "CA",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-760-481-4120",
+              "contactType": "Customer Support"
+            },
+            "sameAs": [
+              "https://www.facebook.com/digitalqrcard",
+              "https://www.youtube.com/@DigitalQRCard",
+              "https://www.instagram.com/digitalqrcard",
+              "https://www.linkedin.com/company/digitalqrcard"
+            ],
+            "description": "Digital QR Card makes customizable QR-based digital business cards for professionals. Replace paper cards with a scannable, updatable digital identity."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.digitalqrcard.com/#website",
+            "url": "https://www.digitalqrcard.com/",
+            "name": "Digital QR Card",
+            "publisher": {
+              "@id": "https://www.digitalqrcard.com/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://www.digitalqrcard.com/#software",
+            "name": "Digital QR Card",
+            "operatingSystem": "Web",
+            "applicationCategory": "BusinessApplication",
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Free",
+                "price": "0",
+                "priceCurrency": "USD",
+                "description": "2 digital cards with unlimited sharing. No subscription."
+              },
+              {
+                "@type": "Offer",
+                "name": "Pro Lifetime",
+                "price": "45",
+                "priceCurrency": "USD",
+                "description": "One-time payment for lifetime Pro access. No subscription."
+              },
+              {
+                "@type": "Offer",
+                "name": "Starter Crew (3 seats)",
+                "price": "99",
+                "priceCurrency": "USD",
+                "description": "One-time team pack, 3 seats, each with Pro features."
+              },
+              {
+                "@type": "Offer",
+                "name": "Family Pack (5 seats)",
+                "price": "149",
+                "priceCurrency": "USD",
+                "description": "One-time team pack, 5 seats, each with Pro features."
+              },
+              {
+                "@type": "Offer",
+                "name": "Crew Ten (10 seats)",
+                "price": "249",
+                "priceCurrency": "USD",
+                "description": "One-time team pack, 10 seats, each with Pro features."
+              }
+            ],
+            "description": "A digital business card that shares your full profile in one tap. Track scans, update info instantly, and replace paper cards forever."
+          }
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://api.digitalqrcard.com">
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;family=Poppins:wght@400;600;700&amp;display=swap">
+    <!-- A plain stylesheet: the print-then-onload trick is an inline handler,
+         which the Content Security Policy does not allow. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;family=Poppins:wght@400;600;700&amp;display=swap">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code vs NFC Business Cards: How to Choose | The Digital QR Card Blog | Networking Trends &amp; Tips</title>
+    <script type="module" crossorigin="" src="/assets/index-DIyE2Hzy.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/assets/vendor-DFXNMGXD.js">
+    <link rel="stylesheet" crossorigin="" href="/assets/index-BE1H17rY.css">
+  <style id="_goober"> @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style><link rel="modulepreload" as="script" crossorigin="" href="/assets/Blog-ddz9etbc.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/BusinessHubPointer-CJzorX-8.js"><link rel="stylesheet" crossorigin="" href="/assets/BusinessHubPointer-B9LveVuZ.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/ilyes-X91CwVeT.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/useQuery-ChHthfCl.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/FreeForEver-B6BRq57U.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/digital-qr-card-free-plan-BMgL5DkZ.js"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" data-rh="true"><link rel="canonical" href="https://www.digitalqrcard.com/blog/qr-code-vs-nfc-business-cards-how-to-choose" data-rh="true"><meta name="description" content="QR and NFC business cards both hand someone a link to your details. A camera reads a QR code, a phone tap reads an NFC chip, so each has its place…" data-rh="true"><meta property="og:url" content="https://www.digitalqrcard.com/blog/qr-code-vs-nfc-business-cards-how-to-choose" data-rh="true"><meta property="og:title" content="QR Code vs NFC Business Cards: How to Choose" data-rh="true"><meta property="og:description" content="QR and NFC business cards both hand someone a link to your details. A camera reads a QR code, a phone tap reads an NFC chip, so each has its place…" data-rh="true"><meta property="og:image" content="/assets/logo_150-BYCEwisQ.png" data-rh="true"><meta property="og:type" content="article" data-rh="true"><meta name="twitter:card" content="summary_large_image" data-rh="true"><meta name="twitter:title" content="QR Code vs NFC Business Cards: How to Choose" data-rh="true"><meta name="twitter:description" content="QR and NFC business cards both hand someone a link to your details. A camera reads a QR code, a phone tap reads an NFC chip, so each has its place…" data-rh="true"><meta name="twitter:image" content="/assets/logo_150-BYCEwisQ.png" data-rh="true"><script type="application/ld+json" data-rh="true">{"@context":"https://schema.org","@type":"BlogPosting","headline":"QR Code vs NFC Business Cards: How to Choose","image":["/assets/logo_150-BYCEwisQ.png"],"datePublished":"2026-11-26T04:12:16.326Z","description":"QR and NFC business cards both hand someone a link to your details. A camera reads a QR code, a phone tap reads an NFC chip, so each has its place…","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.digitalqrcard.com/blog/qr-code-vs-nfc-business-cards-how-to-choose"},"author":{"@type":"Person","name":"Ilyes Tounsi","url":"https://www.digitalqrcard.com/about","jobTitle":"Founder, Digital QR Card"},"publisher":{"@type":"Organization","name":"Digital QR Card","logo":{"@type":"ImageObject","url":"https://www.digitalqrcard.com/logo.png"}}}</script></head>
+
+  <body data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0">
+    <div id="root"><a href="#main" class="skip-link">Skip to main content</a><header class="_header_c5lqb_2"><div class="notification-ribbon fixed top-0 inset-x-0 z-50 flex items-center justify-between relative" style="background-color: rgb(255, 243, 205); color: rgb(133, 100, 4); text-align: center; padding: 8px 10px; font-size: 0.85rem; border-bottom: 1px solid rgb(255, 238, 186); font-weight: 500;"><span class="flex-1 text-center">Thanksgiving offer: 50% off Pro Lifetime. $22.50 instead of $45, until the end of Saturday, November 28 (Pacific). <a href="/founding-member" class="underline hover:text-yellow-900 font-semibold">Buy Pro Lifetime →</a></span><button class="ml-3 text-yellow-800 hover:text-yellow-900 p-1" aria-label="Dismiss notification" style="background: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div><div class="_navContainer_c5lqb_18"><a class="_logo_c5lqb_27" aria-label="DigitalQRCard Home" href="/" data-discover="true"><img src="/assets/logo_150-BYCEwisQ.png" alt="DigitalQRCard Logo" width="40" height="40"> DigitalQRCard</a><button class="_mobileToggle_c5lqb_130" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 12h16"></path><path d="M4 18h16"></path><path d="M4 6h16"></path></svg></button><nav class="_navLinks_c5lqb_37 " aria-label="Main navigation"><div class="_navMenu_c5lqb_257" data-open="false"><button type="button" class="_navLink_c5lqb_37 _navMenuButton_c5lqb_263 " aria-expanded="false" aria-controls="nav-product-panel">Product<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down _chevron_c5lqb_267" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><ul id="nav-product-panel" class="_navMenuPanel_c5lqb_275" hidden=""><li><a class="_navMenuLink_c5lqb_294" href="/card-creation-guide" data-discover="true">Card Creation Guide</a></li><li><a class="_navMenuLink_c5lqb_294" href="/team/buy" data-discover="true">Teams</a></li><li><a class="_navMenuLink_c5lqb_294" href="/tools/qr-generator" data-discover="true">Free QR Code Creator</a></li><li><a class="_navMenuLink_c5lqb_294" href="/connect-claude" data-discover="true">Use with Claude</a></li></ul></div><div class="_navMenu_c5lqb_257" data-open="false"><button type="button" class="_navLink_c5lqb_37 _navMenuButton_c5lqb_263 " aria-expanded="false" aria-controls="nav-solutions-panel">Solutions<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down _chevron_c5lqb_267" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><ul id="nav-solutions-panel" class="_navMenuPanel_c5lqb_275" hidden=""><li><a class="_navMenuLink_c5lqb_294" href="/for/realtors" data-discover="true">Real Estate Agents</a></li><li><a class="_navMenuLink_c5lqb_294" href="/for/sales" data-discover="true">Sales Reps</a></li><li><a class="_navMenuLink_c5lqb_294" href="/for/financial-advisors" data-discover="true">Financial Advisors</a></li><li><a class="_navMenuLink_c5lqb_294" href="/for/insurance" data-discover="true">Insurance Agents</a></li><li><a class="_navMenuLink_c5lqb_294" href="/for/mortgage" data-discover="true">Mortgage Brokers</a></li><li><a class="_navMenuLink_c5lqb_294" href="/for/photographers" data-discover="true">Photographers</a></li><li><a class="_navMenuLink_c5lqb_294" href="/for/business-owners" data-discover="true">Business Owners</a></li><li><a class="_navMenuLink_c5lqb_294" href="/for/teams" data-discover="true">Teams</a></li></ul></div><a class="_navLink_c5lqb_37 _navLinkHub_c5lqb_320" href="/directory" data-discover="true">Business Hub</a><a class="_navLink_c5lqb_37" href="/pricing" data-discover="true">Pricing</a><div class="_navMenu_c5lqb_257" data-open="false"><button type="button" class="_navLink_c5lqb_37 _navMenuButton_c5lqb_263 " aria-expanded="false" aria-controls="nav-company-panel">Company<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down _chevron_c5lqb_267" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><ul id="nav-company-panel" class="_navMenuPanel_c5lqb_275" hidden=""><li><a class="_navMenuLink_c5lqb_294" href="/about" data-discover="true">About</a></li><li><a class="_navMenuLink_c5lqb_294" href="/faq" data-discover="true">F.A.Q</a></li><li><a class="_navMenuLink_c5lqb_294" href="/support" data-discover="true">Support</a></li><li><a class="_navMenuLink_c5lqb_294" href="/contact" data-discover="true">Contact</a></li></ul></div><div class="_navLink_c5lqb_37" style="padding: 0px; display: inline-flex; align-items: center; position: relative; gap: 0.25rem;"><select id="language-select" class="form-select form-select-sm d-inline-block w-auto" style="border: 0.1rem solid rgb(96, 165, 250); background: url(&quot;data:image/svg+xml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDggMTIiIHdpZHRoPSI4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00IDhsNC00SDB6Ii8+PC9zdmc+&quot;) right 0.5rem center / 0.75rem no-repeat transparent; padding: 0.25rem 2rem 0.25rem 0.75rem; appearance: none; min-width: 4rem;"><option value="en">English</option><option value="ar">العربية</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="hi">हिन्दी</option><option value="it">Italiano</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="pt">Português</option><option value="ru">Русский</option><option value="zh">中文</option><option value="id">Bahasa Indonesia</option></select></div><a class="_navLink_c5lqb_37" href="/login" data-discover="true">Login</a></nav></div></header><main id="main" tabindex="-1" class="transition-all duration-300 page-fade"><div class="container position-relative" style="max-width: 800px; padding-top: 120px;"><div class="d-none d-xl-flex flex-column gap-3 position-fixed" style="z-index: 1000; left: 40px; top: 50%; transform: translateY(-50%);"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4321%2Fblog%2Fqr-code-vs-nfc-business-cards-how-to-choose&amp;text=QR%20Code%20vs%20NFC%20Business%20Cards%3A%20How%20to%20Choose" target="_blank" rel="noreferrer" class="btn btn-white shadow-sm rounded-circle border d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; color: rgb(29, 161, 242);"><i class="bi bi-twitter fs-5"></i></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Flocalhost%3A4321%2Fblog%2Fqr-code-vs-nfc-business-cards-how-to-choose" target="_blank" rel="noreferrer" class="btn btn-white shadow-sm rounded-circle border d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; color: rgb(0, 119, 181);"><i class="bi bi-linkedin fs-5"></i></a><button class="btn btn-white shadow-sm rounded-circle border d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;"><i class="bi bi-link-45deg fs-5"></i></button></div><article><header class="mb-4"><h1 class="display-4 fw-bold mb-2">QR Code vs NFC Business Cards: How to Choose</h1><div class="d-flex align-items-center gap-3 text-muted flex-wrap"><span class="badge bg-primary">Comparisons</span><span>Nov 26</span><span aria-hidden="true">·</span><span>By <a class="text-decoration-none" href="/about" data-discover="true">Ilyes Tounsi</a>, founder</span></div></header><img src="/assets/logo_150-BYCEwisQ.png" class="img-fluid rounded-4 mb-5 shadow-sm w-100" alt="QR Code vs NFC Business Cards: How to Choose" style="max-height: 400px; object-fit: cover;"><div class="blog-content fs-5 lh-lg"><div><p>QR and NFC business cards both hand someone a link to your details. A camera reads a QR code, a phone tap reads an NFC chip, so each has its place. Below, we compare them, including what we do and don't offer.</p>
+
+<h2>How each one works</h2>
+
+<p>A QR code is a printed pattern. You point your phone's camera at it, the phone reads the pattern, and it offers to open whatever address the pattern holds. It needs no hardware beyond ink or a screen.</p>
+
+<p>NFC is a short-range radio chip. A business card with an NFC chip inside, or a tag stuck to a phone case, stores a small piece of data, usually a web address. When a phone is held a few centimetres from it, the phone reads the address and opens it. It needs a physical object that someone had to buy or make.</p>
+
+<p>In both cases the person ends up on a web page. The code or the chip is only the delivery method. The part that decides whether your card is useful is the page it opens.</p>
+
+<h2>Where a QR code is stronger</h2>
+
+<ul>
+  <li><strong>It works anywhere you can show an image.</strong> A flyer, a menu, a window, a slide, a badge, a social post, an email signature, a screen shared on a call. An NFC chip can't be put on a slide that people photograph from the back of a room.</li>
+  <li><strong>It costs nothing to add.</strong> A code is part of the print you were already ordering, or a picture on your phone screen.</li>
+  <li><strong>Many people can scan at once.</strong> At a talk, a hundred people can scan a slide at the same time. A tap works for one person at a time.</li>
+  <li><strong>It works at a distance.</strong> A large code on a sign can be scanned from several metres away. An NFC tap needs the phone nearly touching the chip.</li>
+  <li><strong>It's cheap to replace.</strong> A printed code can fade or tear, like any print, but reprinting one costs little, and a chip card that bends, cracks or gets lost has to be bought again.</li>
+</ul>
+
+<h2>Where NFC is stronger</h2>
+
+<ul>
+  <li><strong>The tap is quick in a one-to-one meeting.</strong> There's no aiming and no waiting for the camera to focus.</li>
+  <li><strong>It works without good light.</strong> A camera needs to see the pattern. A chip doesn't.</li>
+  <li><strong>It feels like a gadget.</strong> Some people like the object itself, and a metal or specialty card can make an impression.</li>
+</ul>
+
+<h2>Where NFC gets awkward</h2>
+
+<p>Phone support varies by model and by settings. Many current phones can read a tag, but not all, and some need NFC switched on first. A metal case or a metal surface behind the chip can block the signal. A chip also stores what was written to it. If it holds a web address that you can't edit afterwards, the card is only as flexible as the page behind that address.</p>
+
+<p>That last point matters most, and it applies to both methods. If either one points straight at a fixed link, such as your LinkedIn profile, then every card is wrong the moment that link changes. If either one points at a page you control, you can change what the page says without replacing a single card.</p>
+
+<h2>What we do and don't offer</h2>
+
+<p>Digital QR Card is built on QR codes and links. Your card has its own web address and its own QR code, the card opens in the browser, and anyone can save your contact with one tap. People who scan don't need an app.</p>
+
+<p>We don't make or sell NFC cards, and the product has no NFC-specific feature. Because your card is an ordinary web link, any NFC tag or card that can hold a web address could be written with it, if you want a tap option and buy the hardware elsewhere. That's your decision to make and your hardware to test. We don't support or guarantee that setup.</p>
+
+<p>On the phone side, your card can be added to the home screen of the person who opens it.</p>
+
+<h2>How to choose</h2>
+
+<p>Use these rules of thumb.</p>
+
+<ul>
+  <li>If most of your handouts happen on paper, on signs, on screens or in groups, use a QR code.</li>
+  <li>If you meet people one at a time, indoors, and like the idea of a physical object, an NFC card is a nice extra.</li>
+  <li>If you're not sure, start with the QR code. It costs nothing to try, and it covers the cases where NFC can't help.</li>
+  <li>Whichever you pick, point it at a page you can edit.</li>
+</ul>
+
+<p>Some people do both: an NFC card for the tap and a QR code printed on the back for people whose phones don't read the chip. The code is the fallback, because nearly every current phone's camera app can read it.</p>
+
+<h2>The cost question</h2>
+
+<p>A QR code costs the price of a print job you were already doing. An NFC card adds the cost of the hardware, and you'd pay it again for each person on a team. If you're comparing digital card plans, look at what the page behind the code or chip does for you: whether you can edit it, whether you can see how often it's opened, and whether it can collect details from the people who scan. The <a href="https://www.digitalqrcard.com/pricing">pricing page</a> lists what each of our plans includes, and our earlier <a href="https://www.digitalqrcard.com/blog/digital-business-card-pricing-in-2026-free-lifetime-subscription-compared">pricing comparison</a> looks at how one-time and subscription prices add up over several years.</p>
+
+<p>If a QR code suits the way you share your details, <a href="https://www.digitalqrcard.com/register?plan=free">make a free card</a> and try it in a real conversation this week.</p>
+</div></div><aside class="d-flex gap-3 align-items-start border rounded-4 p-3 mt-5 bg-light" aria-label="About the author"><img src="/assets/ilyes-Bf612VQE.jpg" alt="Ilyes Tounsi, founder of Digital QR Card" width="72" height="72" loading="lazy" style="border-radius: 50%; object-fit: cover; flex-shrink: 0;"><div><div class="fw-semibold mb-1">Ilyes Tounsi</div><p class="mb-1 small text-muted">Founder of Digital QR Card. Solo operator based in Carlsbad, CA. I write the code, answer the support emails, and ship the updates. If something here is wrong, email me directly at <a href="mailto:support@digitalqrcard.com">support@digitalqrcard.com</a>.</p><a class="small" href="/about" data-discover="true">More about me →</a></div></aside></article><div class="mt-5"><section class="py-5"><div class="container"><div class="row align-items-center mb-5"><div class="col-md-7"><h2 class="display-5 fw-bold">Free forever — 2 digital QR Cards</h2><p class="lead" style="color: rgb(68, 68, 68);">Share your contact, socials and more with beautiful digital cards. No credit card required — start for free and keep them for life.</p><div class="d-flex flex-column flex-sm-row gap-3 mt-4"><a class="btn btn-primary btn-lg d-flex align-items-center justify-content-center" aria-label="Create your free digital card" href="/register?plan=free" data-discover="true" style="background: linear-gradient(90deg, rgb(0, 82, 204), rgb(0, 61, 153)); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; box-shadow: rgba(3, 102, 214, 0.18) 0px 6px 18px; padding: 0.9rem 1.6rem; font-weight: 700; width: 100%; max-width: 420px;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;"><path d="M624 208h-64v-64c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v64h-64c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h64v64c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-64h64c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm-400 48c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg><span>Create your Free Card — $0</span></a><a class="btn btn-outline-dark btn-lg d-flex align-items-center justify-content-center compare-btn" aria-label="Compare Plans" href="/pricing" data-discover="true" style="width: 100%; max-width: 240px;">Compare Plans</a></div></div><div class="col-md-5 text-center mt-4 mt-md-0"><div class="shadow-lg rounded overflow-hidden" style="max-width: 360px; margin: 0px auto;"><img src="/assets/digital-qr-card-free-plan-Bg3asYeQ.png" alt="Free digital QR card plan – 2 cards, lifetime access" class="img-fluid" loading="lazy" width="360" height="500"></div></div></div><div class="row gy-4"><div class="col-lg-8 mx-auto"><div class="card border-0 shadow-sm"><div class="card-body"><h3 class="mb-3">What's included</h3><ul class="list-unstyled lh-lg mb-4"><li>• Create 2 digital Cards — yours forever</li><li>• Unlimited card sharing — no limits</li><li>• One-Tap Add To Contacts for quick saves</li><li>• <b>Available in 13 languages, from English to 中文</b></li><li>• Works on every device — mobile &amp; desktop</li><li style="color: rgb(85, 85, 85);">No hidden fees — paid features available if you want more.</li></ul><div class="d-flex justify-content-between align-items-center"><div><div class="h4 mb-0"><strong>$0</strong></div><div class="small text-success">Free Forever</div></div><div><a class="btn btn-lg d-flex align-items-center justify-content-center" aria-label="Register for free" href="/register?plan=free" data-discover="true" style="background: linear-gradient(90deg, rgb(0, 82, 204), rgb(0, 61, 153)); color: rgb(255, 255, 255); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; box-shadow: rgba(3, 102, 214, 0.18) 0px 6px 18px; padding: 0.65rem 1.4rem; font-weight: 700;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;"><path d="M624 208h-64v-64c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v64h-64c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h64v64c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-64h64c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm-400 48c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg>Register for Free</a></div></div></div></div></div></div></div></section><style>
+        .compare-btn:hover, .compare-btn:focus {
+          background-color: rgba(0,0,0,0.06);
+          color: #111;
+          border-color: rgba(0,0,0,0.12);
+        }
+      </style></div></div></main><div class="cookie-banner" role="region" aria-label="Cookie preferences"><div class="cookie-banner__inner"><div class="cookie-banner__text"><strong>We use cookies</strong><p class="cookie-banner__desc">In order to provide you with the best experience, we use some cookies on our website. Using our site means you are aware that we are using cookies and grant us permission to do so. You may change these permissions any time. <a class="cookie-banner__link" href="/privacy" data-discover="true">Learn more</a></p><div class="cookie-banner__mini-prefs" aria-hidden="false"><label class="cookie-banner__mini-label">Tracking cookies</label><label class="switch"><input type="checkbox" aria-checked="true" checked=""><span class="slider"></span></label><button class="btn btn-link cookie-banner__settings">Settings</button></div></div><div class="cookie-banner__actions"><button class="btn btn-primary btn-sm">Accept</button></div></div><style>
+        .cookie-banner { position: fixed; left: 12px; right: 12px; bottom: env(safe-area-inset-bottom, 12px); z-index: 1300; display:flex; justify-content:center; }
+        .cookie-banner__inner { max-width:1100px; width:100%; background: linear-gradient(90deg,#ffffff,#fbfdfd); border-radius:12px; box-shadow:0 12px 36px rgba(2,6,23,0.12); padding:16px; display:flex; gap:16px; align-items:flex-start; }
+        .cookie-banner__text { flex:1; }
+        .cookie-banner__desc { margin:6px 0 10px; color:#334155; max-width:56rem; }
+        .cookie-banner__link { color:inherit; text-decoration:underline; }
+        .cookie-banner__prefs { display:flex; flex-direction:column; gap:12px; }
+        .cookie-banner__pref { display:flex; justify-content:space-between; gap:12px; align-items:center; }
+        .cookie-banner__pref-left { flex:1; }
+        .cookie-banner__pref-title { font-weight:600; }
+        .cookie-banner__pref-desc { font-size:0.9rem; color:#475569; }
+        .cookie-banner__mini-prefs { display:flex; gap:12px; align-items:center; margin-top:8px; }
+        .cookie-banner__mini-label { font-size:0.9rem; color:#475569; margin-right:6px; }
+        .cookie-banner__actions { display:flex; gap:8px; align-items:center; margin-left:12px; }
+        .cookie-banner__settings { color:var(--bs-primary); background:transparent; border:none; padding:0; text-decoration:underline; cursor:pointer }
+        .cookie-banner__settings:focus { outline: 2px solid rgba(59,130,246,0.25); border-radius:6px; }
+
+        /* toggle switch */
+        .switch { position: relative; display: inline-block; width:44px; height:26px; }
+        .switch input { opacity:0; width:0; height:0; }
+        .slider { position:absolute; cursor:pointer; top:0; left:0; right:0; bottom:0; background:#e6e8eb; transition:.2s; border-radius:999px; }
+        .slider:before { position:absolute; content:""; height:20px; width:20px; left:3px; top:3px; background:white; box-shadow:0 1px 3px rgba(2,6,23,0.2); transition:.2s; border-radius:50%; }
+        input:checked + .slider { background: linear-gradient(90deg,#3b82f6,#06b6d4); }
+        input:checked + .slider:before { transform: translateX(18px); }
+        input[disabled] + .slider { opacity:0.6; cursor:not-allowed; }
+
+        @media (max-width:720px){ .cookie-banner__inner { flex-direction:column; align-items:stretch; } .cookie-banner__actions { justify-content:flex-end; margin-left:0; } }
+      </style></div><footer class="footer"><style>
+.link-anim{display:inline-block;transform:translateZ(0);transition:transform 160ms cubic-bezier(.2,.8,.2,1),color 160ms;will-change:transform}
+.link-anim:focus{outline:none}
+.link-anim:focus-visible{box-shadow:0 0 0 3px rgba(0,123,255,0.18);border-radius:4px}
+.link-anim:hover,.link-anim:focus-visible{transform:translateX(6px)}
+@media (prefers-reduced-motion:reduce){.link-anim{transition:none!important;transform:none!important}}
+</style><div class="footer-top"><div class="container"><div class="row gy-4"><div class="col-lg-3 col-md-12 footer-info"><a class="logo d-flex align-items-center" aria-label="DigitalQRCard Home" href="/" data-discover="true"><img src="/assets/logo_150-BYCEwisQ.png" alt="Digital QR Business Card logo" width="40" height="40"></a><h4>DigitalQRCard</h4><p>We empower your brand with digital cards that click, connect, and convert.</p><div class="footer-links mt-4"><ul><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/founding-member" data-discover="true">Buy Pro Lifetime</a></li></ul></div><hr><img width="250" height="100" src="/assets/StripeLogo-CfCTV2xO.png" alt="guaranteed safe &amp; secure checkout by stripe" style="max-width: 100%; height: auto; display: block;"><a href="https://elevenlabs.io/startup-grants" target="_blank" rel="noopener noreferrer" aria-label="Powered by ElevenLabs Grants" style="display: inline-block; margin-top: 16px;"><img src="https://eleven-public-cdn.elevenlabs.io/payloadcms/pwsc4vchsqt-ElevenLabsGrants.webp" alt="ElevenLabs Grants" width="250" height="71" loading="lazy" style="max-width: 100%; height: auto; display: block;"></a></div><div class="col-lg-2 col-6 footer-links"><h4>Useful Links</h4><ul><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/about" data-discover="true">About us</a>&nbsp; | &nbsp;<a class="link-anim" href="/careers" data-discover="true">Careers</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/contact" data-discover="true">Contact</a>&nbsp; | &nbsp;<a class="link-anim" href="/support" data-discover="true">Support</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/blog" data-discover="true">Blog</a>&nbsp; | &nbsp;<a class="link-anim" href="/podcast/networking-pulse" data-discover="true">Podcast</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/terms-of-service" data-discover="true">Terms of service</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/privacy" data-discover="true">Privacy policy</a></li><li><i class="bi bi-chevron-right"></i> <a href="#" class="link-anim" aria-label="Open cookie settings">Manage cookies</a></li><li><i class="bi bi-chevron-right"></i> <a href="#" role="button" class="link-anim">Report a problem</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/faq" data-discover="true">F.A.Q</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/login" data-discover="true">Login</a>&nbsp; | &nbsp;<a class="link-anim" href="/register" data-discover="true">Sign Up</a></li></ul><img width="120" height="60" src="/assets/let-s-encrypt-D77t6W8E.png" alt="Let's Encrypt is a certificate authority (CA)"></div><div class="col-lg-2 col-6 footer-links"><h4>Our Services</h4><ul><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/directory" data-discover="true">Business Hub</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/register" data-discover="true">Business Card</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/subscription-policy" data-discover="true">Payment &amp; refunds</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/economics" data-discover="true">Subscription Economics</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/card-creation-guide" data-discover="true">Card Creation Guide</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/connect-claude" data-discover="true">Use with Claude</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/tools/qr-generator" data-discover="true">Free QR Code Creator</a></li></ul></div><div class="col-lg-2 col-6 footer-links"><h4>For your profession</h4><ul><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/realtors" data-discover="true">Real Estate Agents</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/sales" data-discover="true">Sales Reps</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/financial-advisors" data-discover="true">Financial Advisors</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/insurance" data-discover="true">Insurance Agents</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/mortgage" data-discover="true">Mortgage Brokers</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/photographers" data-discover="true">Photographers</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/business-owners" data-discover="true">Business Owners</a></li><li><i class="bi bi-chevron-right"></i> <a class="link-anim" href="/for/teams" data-discover="true">Teams</a></li></ul></div><div class="col-lg-3 col-md-12 footer-contact text-center text-md-start"><h4>Contact Us</h4>Carlsbad California USA<br><strong>Phone:</strong> +1 (760) 481-4120<br><strong>Email:</strong> <a href="mailto:support@digitalqrcard.com">support@digitalqrcard.com</a><div class="social-links mt-3"><a href="https://www.facebook.com/digitalqrcard" class="link-anim facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="https://www.youtube.com/@DigitalQRCard" class="link-anim youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube bx bxl-youtube"></i></a><a href="https://www.instagram.com/digitalqrcard/" class="link-anim instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="https://www.linkedin.com/company/digitalqrcard" class="link-anim linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><hr>Your opinion matters! Help others by sharing your experience on<a href="https://www.trustpilot.com/review/digitalqrcard.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.trustpilot.net/brand-assets/4.3.0/logo-black.svg" alt="Trustpilot" style="height: 24px; margin-left: 8px;"></a><div class="small text-muted mt-2">Non-personalized ads</div></div></div></div></div></div><div class="copyright">© 2024-2026 Copyright. All Rights Reserved</div><div class="credits">Made with <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red; margin: 0px 6px;"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg> by <a aria-label="GitHub Profile" href="https://github.com/tounsils"><span class="bi bi-github"></span> tounsils </a> using React <i class="ri-reactjs-line"></i> · <a href="https://www.tn76.com" target="_blank" rel="noopener noreferrer">tn76.com</a><br>Version 3.215 -  Last update November 2026<br><a href="https://db-ip.com" target="_blank" rel="noopener noreferrer" data-testid="geo-attribution">IP Geolocation by DB-IP</a></div></footer><div id="_rht_toaster" style="position: fixed; z-index: 9999; top: calc(72px + var(--ribbon-height, 0px) + var(--celebration-strip-height, 0px)); left: 16px; right: 16px; bottom: 16px; pointer-events: none;"></div></div>
+  
+
+</body></html>

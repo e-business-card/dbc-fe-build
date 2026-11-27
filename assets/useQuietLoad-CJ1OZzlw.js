@@ -1,0 +1,1 @@
+import{b as u}from"./vendor-DFXNMGXD.js";function l(t,a){const[n,s]=u.useState({phase:"loading"});return u.useEffect(()=>{let e=!1;return t().then(c=>{if(e)return;const r=a(c);s(r===null?{phase:"failed"}:{phase:"ready",value:r})}).catch(()=>{e||s({phase:"failed"})}),()=>{e=!0}},[t,a]),n}export{l as u};
